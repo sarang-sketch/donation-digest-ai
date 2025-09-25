@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Leaf, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { LoginForm } from "./LoginForm";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ const Header = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost">Sign In</Button>
+            <LoginForm />
             <Button className="bg-gradient-hero hover:shadow-glow transition-all duration-300">
               Get Started
             </Button>
@@ -71,7 +72,9 @@ const Header = () => {
                 Community
               </a>
               <div className="pt-4 space-y-2">
-                <Button variant="ghost" className="w-full justify-start">Sign In</Button>
+                <div className="w-full">
+                  <LoginForm />
+                </div>
                 <Button className="w-full bg-gradient-hero hover:shadow-glow transition-all duration-300">
                   Get Started
                 </Button>
